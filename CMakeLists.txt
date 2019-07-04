@@ -21,3 +21,15 @@ catkin_package(
     curl
   CATKIN_DEPENDS
 )
+
+############
+## INSTALL ##
+#############
+
+install(DIRECTORY ${CATKIN_DEVEL_PREFIX}/include/cpr
+  DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}
+)
+
+install(DIRECTORY ${CATKIN_DEVEL_PREFIX}/lib/
+  DESTINATION ${CATKIN_GLOBAL_LIB_DESTINATION}
+)
