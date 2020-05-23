@@ -9,6 +9,7 @@ file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 
 ExternalProject_Add(cpr
   GIT_REPOSITORY "https://github.com/whoshuu/cpr.git"
+  GIT_TAG "1.4.0"
   CMAKE_CACHE_ARGS "-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=true"
   INSTALL_COMMAND bash "-c" "cp -r ../cpr/include/* ${CATKIN_DEVEL_PREFIX}/include && cp lib/*.a ${CATKIN_DEVEL_PREFIX}/lib && cp lib/*.so ${CATKIN_DEVEL_PREFIX}/lib"
 )
